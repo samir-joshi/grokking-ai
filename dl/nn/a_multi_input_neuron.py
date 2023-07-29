@@ -13,9 +13,9 @@ class Neuron:
             return "Inputt length is 0"
         if len(input) != len(self.weight):
             return "Number of input elements do not match the weights initialized with"
-        output = []
+        output = 0
         for i in range(len(input)):
-            output.append( input[i] * self.weight[i])
+            output +=   input[i] * self.weight[i]
         return output
 
 def main():
@@ -25,7 +25,6 @@ def main():
     answer = the_neuron.predict(input)
     print(f" With input {input}, weight {weight} , prediction is : {answer}")
 
-print(f" __name__ is {__name__}. What did you expect ?")
 
 if __name__ == "__main__" :
     main()
